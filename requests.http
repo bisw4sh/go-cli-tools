@@ -1,0 +1,18 @@
+### Create a todo
+curl -X POST http://localhost:8080/todos \
+  -H "Content-Type: application/json" \
+  -d '{"title":"I did","completed":false}'
+
+### Get all todos
+curl http://localhost:8080/todos
+
+### Get a specific todos
+curl http://localhost:8080/todos/3
+
+### Update a todo
+curl -X PUT http://localhost:8080/todos/3 \
+  -H "Content-Type: application/json" \
+  -d '{"title":"Learn Go","completed":true}'
+
+### Delete a todo
+curl -X DELETE http://localhost:8080/todos/1
